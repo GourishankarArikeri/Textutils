@@ -40,9 +40,9 @@ function App() {
     <>
       <main className={icon?"main1":"main2"}>
         <nav className="navbar"><p className="h1">Textutils</p><button onClick={topchange} className={icon?"btn1":"btn2"} >{icon?<Sun/>:<Moon/>}{icon?"Light":"Dark"}Mode</button></nav>
-   
+           <center>
       <textarea onChange={ontext} value={input} className={icon?"input1":"input2"}></textarea>
-
+         </center>
       <div className="buttons">
         <button className="btn" onClick={onupper}>Upper case</button>
          <button className="btn" onClick={onlow}>Lower case</button>
@@ -54,7 +54,7 @@ function App() {
       </div>
 
 
-      <p className={icon?"in1":"in2"} >Type something </p>
+      <p className={icon?"in1":"in2"} >{ input.length>0?"preview":"Type something"} </p>
 
       <p className={icon?"in1":"in2"}>{input} </p>
       </main>
